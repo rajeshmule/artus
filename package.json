@@ -4,10 +4,10 @@
   "private": true,
   "homepage": "https://rajeshmule.github.io/artus-react",
   "dependencies": {
-    "@csstools/normalize.css": "^10.1.0",
-    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/jest-dom": "^5.1.1",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "bulma": "^0.8.0",
     "gh-pages": "^2.2.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
