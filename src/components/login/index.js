@@ -5,6 +5,7 @@ const Login = () => {
     <div className="container">
       <div className="columns is-mobile">
         <div className="column is-half is-offset-one-quarter">
+          <h1 className="title is-4 has-text-centered">Login</h1>
           <form>
             <div className="field">
               <p className="control has-icons-left has-icons-right">
@@ -29,7 +30,9 @@ const Login = () => {
                 </span>
               </p>
             </div>
-            <button class="button is-primary">login</button>
+            <div className="has-text-right">
+              <button class="button is-primary">login</button>
+            </div>
           </form>
         </div>
       </div>

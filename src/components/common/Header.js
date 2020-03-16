@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -10,10 +10,10 @@ function Header() {
     >
       <div className="navbar-brand">
         <NavLink to="/" activeClassName="is-primary" className="navbar-item">
-          <h1 className="title">artus</h1>
+          <h1 className="title is-2">artus</h1>
         </NavLink>
 
-        <a
+        <Link
           role="button"
           className="navbar-burger burger"
           aria-label="menu"
@@ -23,7 +23,7 @@ function Header() {
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
-        </a>
+        </Link>
       </div>
 
       <div id="navbarBasicExample" className="navbar-menu">
