@@ -6,7 +6,15 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <Main />
+      <div class="container">
+        <div class="columns">
+          <div class="column is-three-quarters">
+            {" "}
+            <Main />
+          </div>
+          <div class="column">tags</div>
+        </div>
+      </div>
     </>
   );
 };
