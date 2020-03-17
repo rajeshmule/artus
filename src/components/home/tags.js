@@ -17,14 +17,18 @@ class Tags extends React.Component {
   }
 
   render() {
+    const tags = this.state.tags;
     return (
       <div className="notification">
         <h1 className="title is-5">Tags</h1>
         <div className="tags">
-          {this.state.tags &&
-            this.state.tags.map(tag => {
+          {!tags ? (
+            <progress class="progress is-small is-primary" max="100"></progress>
+          ) : (
+            tags.map(tag => {
               return <span className="tag is-dark">{tag}</span>;
-            })}
+            })
+          )}
         </div>
       </div>
     );

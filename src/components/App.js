@@ -1,10 +1,10 @@
 import React from "react";
 import { Route } from "react-router-dom";
 
+import Header from "./common/Header";
 import Home from "./home";
 import Login from "./login";
 import Signup from "./signup";
-import Header from "./common/Header";
 import Article from "./article";
 
 function App() {

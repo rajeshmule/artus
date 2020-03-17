@@ -22,7 +22,7 @@ class Article extends React.Component {
     return (
       <>
         {!article ? (
-          "loading"
+          <progress class="progress is-small is-info" max="100"></progress>
         ) : (
           <div>
             <Hero title={article.title} author={article.author} />

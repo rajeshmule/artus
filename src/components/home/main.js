@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
+import ArticleCard from "../common/AriticleCard";
 
 class Main extends React.Component {
   constructor() {
@@ -18,17 +19,21 @@ class Main extends React.Component {
   }
 
   render() {
+    const articles = this.state.articles;
     return (
-      <ul>
-        {this.state.articles &&
-          this.state.articles.map(article => {
+      <>
+        {!articles ? (
+          <progress class="progress is-small is-primary" max="100"></progress>
+        ) : (
+          articles.map(article => {
             return (
-              <li>
-                <Link to={`/article/${article.slug}`}>{article.title}</Link>
-              </li>
+              <ul>
+                <ArticleCard article={article} />
+              </ul>
             );
-          })}
-      </ul>
+          })
+        )}
+      </>
     );
   }
 }
