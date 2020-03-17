@@ -1,17 +1,22 @@
 import React from "react";
 import Hero from "./hero";
 import Main from "./main";
+import Tags from "./tags";
 
 const Home = () => {
   return (
     <>
       <Hero />
-      <div class="container">
-        <div class="columns">
-          <div class="column is-three-quarters">
-            <Main />
+      <div className="container">
+        <div className="section">
+          <div className="columns">
+            <div className="column is-three-quarters">
+              <Main />
+            </div>
+            <div className="column">
+              <Tags />
+            </div>
           </div>
-          <div class="column">tags</div>
         </div>
       </div>
     </>
