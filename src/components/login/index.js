@@ -31,7 +31,7 @@ const Login = () => {
               </p>
             </div>
             <div className="has-text-right">
-              <button class="button is-primary">login</button>
+              <button className="button is-primary">login</button>
             </div>
           </form>
         </div>

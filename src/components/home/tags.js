@@ -23,7 +23,10 @@ class Tags extends React.Component {
         <h1 className="title is-5">Tags</h1>
         <div className="tags">
           {!tags ? (
-            <progress class="progress is-small is-primary" max="100"></progress>
+            <progress
+              className="progress is-small is-primary"
+              max="100"
+            ></progress>
           ) : (
             tags.map(tag => {
               return <span className="tag is-dark">{tag}</span>;

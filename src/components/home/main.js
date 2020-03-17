@@ -23,7 +23,10 @@ class Main extends React.Component {
     return (
       <>
         {!articles ? (
-          <progress class="progress is-small is-primary" max="100"></progress>
+          <progress
+            className="progress is-small is-primary"
+            max="100"
+          ></progress>
         ) : (
           articles.map(article => {
             return (

@@ -46,7 +46,7 @@ const Signup = () => {
               </p>
             </div>
             <div className="has-text-right">
-              <button class="button is-primary">Signup</button>
+              <button className="button is-primary">Signup</button>
             </div>
           </form>
         </div>
