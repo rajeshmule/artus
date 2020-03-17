@@ -1,5 +1,7 @@
 import React from "react";
 
+import { config } from "../../constants";
+
 class Tags extends React.Component {
   constructor() {
     super();
@@ -9,7 +11,7 @@ class Tags extends React.Component {
   }
 
   componentDidMount() {
-    fetch("https://conduit.productionready.io/api/tags")
+    fetch(`${config.url.API_URL}/tags`)
       .then(res => res.json())
       .then(({ tags }) => {
         this.setState({ tags });

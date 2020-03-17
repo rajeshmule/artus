@@ -1,6 +1,9 @@
 import React from "react";
 
 import ArticleCard from "../common/AriticleCard";
+import Pagination from "../common/Pagination";
+
+import { config } from "../../constants";
 
 class Main extends React.Component {
   constructor() {
@@ -11,7 +14,7 @@ class Main extends React.Component {
   }
 
   componentDidMount() {
-    fetch("https://conduit.productionready.io/api/articles?limit=10&offset=0")
+    fetch(`${config.url.API_URL}/articles?limit=10&offset=0`)
       .then(res => res.json())
       .then(({ articles }) => {
         this.setState({ articles });
@@ -20,6 +23,7 @@ class Main extends React.Component {
 
   render() {
     const articles = this.state.articles;
+
     return (
       <>
         {!articles ? (
@@ -36,6 +40,7 @@ class Main extends React.Component {
             );
           })
         )}
+        <Pagination />
       </>
     );
   }

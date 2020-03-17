@@ -1,6 +1,8 @@
 import React from "react";
 import Hero from "./hero";
 
+import { config } from "../../constants";
+
 class Article extends React.Component {
   state = {
     article: null
@@ -8,7 +10,7 @@ class Article extends React.Component {
 
   componentDidMount() {
     const slug = this.props.match.params.slug;
-    fetch(`https://conduit.productionready.io/api/articles/${slug}`)
+    fetch(`${config.url.API_URL}/articles/${slug}`)
       .then(res => res.json())
       .then(({ article }) => {
         this.setState({ article });
@@ -17,7 +19,6 @@ class Article extends React.Component {
 
   render() {
     const article = this.state.article;
-    console.log(article);
 
     return (
       <>

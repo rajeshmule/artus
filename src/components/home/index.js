@@ -10,11 +10,11 @@ const Home = () => {
       <div className="container">
         <div className="section">
           <div className="columns">
-            <div className="column is-three-quarters">
-              <Main />
-            </div>
             <div className="column">
               <Tags />
+            </div>
+            <div className="column is-three-quarters">
+              <Main />
             </div>
           </div>
         </div>
