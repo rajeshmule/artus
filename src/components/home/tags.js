@@ -9,8 +9,6 @@ class Tags extends React.Component {
   }
 
   componentDidMount() {
-    console.log("main cdm");
-
     fetch("https://conduit.productionready.io/api/tags")
       .then(res => res.json())
       .then(({ tags }) => {

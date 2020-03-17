@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class Main extends React.Component {
   constructor() {
@@ -9,8 +10,6 @@ class Main extends React.Component {
   }
 
   componentDidMount() {
-    console.log("main cdm");
-
     fetch("https://conduit.productionready.io/api/articles?limit=10&offset=0")
       .then(res => res.json())
       .then(({ articles }) => {
@@ -23,7 +22,11 @@ class Main extends React.Component {
       <ul>
         {this.state.articles &&
           this.state.articles.map(article => {
-            return <li>{article.title}</li>;
+            return (
+              <li>
+                <Link to={`/article/${article.slug}`}>{article.title}</Link>
+              </li>
+            );
           })}
       </ul>
     );
