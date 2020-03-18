@@ -9,8 +9,8 @@ function Header() {
       aria-label="main navigation"
     >
       <div className="navbar-brand">
-        <NavLink to="/" activeClassName="is-primary" className="navbar-item">
-          <h1 className="title is-2">artus</h1>
+        <NavLink to="/" className="navbar-item">
+          <h1 className="title is-2 has-text-primary">artus</h1>
         </NavLink>
 
         <Link

@@ -25,7 +25,7 @@ class Profile extends React.Component {
       <>
         {!profile ? (
           <progress
-            className="progress is-small is-grey-light"
+            className="progress is-small is-primary"
             max="100"
           ></progress>
         ) : (

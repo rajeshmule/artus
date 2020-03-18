@@ -7,7 +7,7 @@ const ArticleCard = props => {
 
   return (
     <li>
-      <div className="card">
+      <div className="card has-background-light	">
         <div className="card-content">
           <div className="media">
             <div className="media-left">
@@ -26,7 +26,7 @@ const ArticleCard = props => {
               </p>
             </div>
             <div className="media-right">
-              <button className="button">
+              <button className="button has-background-light">
                 <span>{article.favoritesCount}</span>
                 <span className="icon has-text-success">
                   <i className="fas fa-heart"></i>

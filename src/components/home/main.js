@@ -40,7 +40,7 @@ class Main extends React.Component {
             );
           })
         )}
-        <Pagination />
+        {/* <Pagination /> */}
       </>
     );
   }
