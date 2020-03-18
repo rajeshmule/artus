@@ -1,6 +1,29 @@
-import React from "react";
+import React, { useRef } from "react";
+
+import { config } from "../../constants";
 
 const Signup = () => {
+  let username = useRef(null);
+  let email = useRef(null);
+  let password = useRef(null);
+
+  function handleSignup() {
+    fetch(`${config.url.API_URL}/users`, {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json"
+      },
+      body: JSON.stringify({
+        user: {
+          username: username.current.value,
+          email: email.current.value,
+          password: password.current.value
+        }
+      })
+    })
+      .then(res => res.json())
+      .then(userData => console.log(userData));
+  }
   return (
     <div className="container">
       <div className="columns is-mobile">
@@ -13,6 +36,7 @@ const Signup = () => {
                   className="input"
                   type="username"
                   placeholder="Username"
+                  ref={username}
                 />
                 <span className="icon is-small is-left">
                   <i className="fas fa-user"></i>
@@ -24,7 +48,12 @@ const Signup = () => {
             </div>
             <div className="field">
               <p className="control has-icons-left has-icons-right">
-                <input className="input" type="email" placeholder="Email" />
+                <input
+                  className="input"
+                  type="email"
+                  placeholder="Email"
+                  ref={email}
+                />
                 <span className="icon is-small is-left">
                   <i className="fas fa-envelope"></i>
                 </span>
@@ -39,6 +68,7 @@ const Signup = () => {
                   className="input"
                   type="password"
                   placeholder="Password"
+                  ref={password}
                 />
                 <span className="icon is-small is-left">
                   <i className="fas fa-lock"></i>
@@ -46,7 +76,9 @@ const Signup = () => {
               </p>
             </div>
             <div className="has-text-right">
-              <button className="button is-primary">Signup</button>
+              <button className="button is-primary" onClick={handleSignup}>
+                Signup
+              </button>
             </div>
           </form>
         </div>

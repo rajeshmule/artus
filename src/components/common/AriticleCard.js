@@ -22,7 +22,7 @@ const ArticleCard = props => {
             <div className="media-content">
               <p className="title is-4">{author.username}</p>
               <p className="subtitle is-6">
-                <Link to={`/${author.username}`}>{author.username}</Link>
+                <Link to={`/@${author.username}`}>{author.username}</Link>
               </p>
             </div>
             <div className="media-right">

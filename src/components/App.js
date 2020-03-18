@@ -6,6 +6,7 @@ import Home from "./home";
 import Login from "./login";
 import Signup from "./signup";
 import Article from "./article";
+import Profile from "./profile";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Route path="/login" component={Login} />
       <Route path="/signup" component={Signup} />
       <Route path="/article/:slug" component={Article} />
+      <Route path="/@:username" component={Profile} />
     </div>
   );
 }
