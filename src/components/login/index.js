@@ -18,13 +18,14 @@ const Login = props => {
       })
     })
       .then(res => res.json())
-      .then(user => {
-        if (user.errors) {
+      .then(userInfo => {
+        if (userInfo.errors) {
           localStorage.setItem("isLoggedIn", false);
         } else {
           localStorage.setItem("isLoggedIn", true);
           props.history.push("/");
           props.updateIsLoggedIn(true);
+          localStorage.setItem("token", userInfo.user.token);
         }
       })
       .catch(err => {

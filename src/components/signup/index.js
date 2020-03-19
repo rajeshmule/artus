@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 
 import { config } from "../../constants";
 
-const Signup = () => {
+const Signup = props => {
   let username = useRef(null);
   let email = useRef(null);
   let password = useRef(null);
@@ -22,7 +22,7 @@ const Signup = () => {
       })
     })
       .then(res => res.json())
-      .then(userData => console.log(userData));
+      .then(user => props.history.push("/login"));
   }
   return (
     <div className="container">
