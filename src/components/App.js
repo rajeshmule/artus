@@ -7,6 +7,8 @@ import Login from "./login";
 import Signup from "./signup";
 import Article from "./article";
 import Profile from "./profile";
+import Editor from "./editor";
+import Settings from "./settings";
 
 class App extends Component {
   constructor(props) {
@@ -30,6 +32,8 @@ class App extends Component {
           render={() => <Login updateIsLoggedIn={this.updateIsLoggedIn} />}
         />
         <Route path="/signup" component={Signup} />
+        <Route path="/editor" component={Editor} />
+        <Route path="/settings" component={Settings} />
         <Route path="/article/:slug" component={Article} />
         <Route path="/@:username" component={Profile} />
       </div>

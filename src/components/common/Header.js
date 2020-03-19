@@ -33,17 +33,17 @@ function Header(props) {
               <div className="buttons">
                 <NavLink
                   activeClassName="is-primary"
-                  to="/signup"
+                  to="/editor"
                   className="button"
                 >
                   New Article
                 </NavLink>
                 <NavLink
                   activeClassName="is-primary"
-                  to="/login"
+                  to="/settings"
                   className="button"
                 >
-                  Profile
+                  Settings
                 </NavLink>
               </div>
             ) : (
