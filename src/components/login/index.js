@@ -24,7 +24,7 @@ const Login = props => {
         } else {
           localStorage.setItem("isLoggedIn", true);
           props.history.push("/");
-          props.updateIsLoggedIn(true);
+          props.userIsLoggedIn(true);
           localStorage.setItem("token", userInfo.user.token);
         }
       })
