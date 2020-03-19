@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
 
-function Header() {
+function Header(props) {
   return (
     <nav
       className="navbar container"
@@ -29,22 +29,41 @@ function Header() {
       <div id="navbarBasicExample" className="navbar-menu">
         <div className="navbar-end">
           <div className="navbar-item">
-            <div className="buttons">
-              <NavLink
-                activeClassName="is-primary"
-                to="/signup"
-                className="button"
-              >
-                Sign up
-              </NavLink>
-              <NavLink
-                activeClassName="is-primary"
-                to="/login"
-                className="button"
-              >
-                Log in
-              </NavLink>
-            </div>
+            {props.isLoggedIn ? (
+              <div className="buttons">
+                <NavLink
+                  activeClassName="is-primary"
+                  to="/signup"
+                  className="button"
+                >
+                  New Article
+                </NavLink>
+                <NavLink
+                  activeClassName="is-primary"
+                  to="/login"
+                  className="button"
+                >
+                  Profile
+                </NavLink>
+              </div>
+            ) : (
+              <div className="buttons">
+                <NavLink
+                  activeClassName="is-primary"
+                  to="/signup"
+                  className="button"
+                >
+                  Sign up
+                </NavLink>
+                <NavLink
+                  activeClassName="is-primary"
+                  to="/login"
+                  className="button"
+                >
+                  Log in
+                </NavLink>
+              </div>
+            )}
           </div>
         </div>
       </div>

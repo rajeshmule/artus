@@ -7,7 +7,7 @@ const ArticleCard = props => {
 
   return (
     <li>
-      <div className="card has-background-light	">
+      <div className="card has-background-light">
         <div className="card-content">
           <div className="media">
             <div className="media-left">

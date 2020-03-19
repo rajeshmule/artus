@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = props => {
   return (
-    <section className="hero is-light ">
+    <section className="hero is-primary">
       <div className="hero-body">
         <div className="container has-text-centered">
           <div className="level-item has-text-centered is-spaced">

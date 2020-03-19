@@ -29,58 +29,56 @@ const Signup = () => {
       <div className="columns is-mobile">
         <div className="column is-half is-offset-one-quarter">
           <h1 className="title is-4 has-text-centered">Signup</h1>
-          <form>
-            <div className="field">
-              <p className="control has-icons-left has-icons-right">
-                <input
-                  className="input"
-                  type="username"
-                  placeholder="Username"
-                  ref={username}
-                />
-                <span className="icon is-small is-left">
-                  <i className="fas fa-user"></i>
-                </span>
-                <span className="icon is-small is-right">
-                  <i className="fas fa-check"></i>
-                </span>
-              </p>
-            </div>
-            <div className="field">
-              <p className="control has-icons-left has-icons-right">
-                <input
-                  className="input"
-                  type="email"
-                  placeholder="Email"
-                  ref={email}
-                />
-                <span className="icon is-small is-left">
-                  <i className="fas fa-envelope"></i>
-                </span>
-                <span className="icon is-small is-right">
-                  <i className="fas fa-check"></i>
-                </span>
-              </p>
-            </div>
-            <div className="field">
-              <p className="control has-icons-left">
-                <input
-                  className="input"
-                  type="password"
-                  placeholder="Password"
-                  ref={password}
-                />
-                <span className="icon is-small is-left">
-                  <i className="fas fa-lock"></i>
-                </span>
-              </p>
-            </div>
-            <div className="has-text-right">
-              <button className="button is-primary" onClick={handleSignup}>
-                Signup
-              </button>
-            </div>
-          </form>
+          <div className="field">
+            <p className="control has-icons-left has-icons-right">
+              <input
+                className="input"
+                type="username"
+                placeholder="Username"
+                ref={username}
+              />
+              <span className="icon is-small is-left">
+                <i className="fas fa-user"></i>
+              </span>
+              <span className="icon is-small is-right">
+                <i className="fas fa-check"></i>
+              </span>
+            </p>
+          </div>
+          <div className="field">
+            <p className="control has-icons-left has-icons-right">
+              <input
+                className="input"
+                type="email"
+                placeholder="Email"
+                ref={email}
+              />
+              <span className="icon is-small is-left">
+                <i className="fas fa-envelope"></i>
+              </span>
+              <span className="icon is-small is-right">
+                <i className="fas fa-check"></i>
+              </span>
+            </p>
+          </div>
+          <div className="field">
+            <p className="control has-icons-left">
+              <input
+                className="input"
+                type="password"
+                placeholder="Password"
+                ref={password}
+              />
+              <span className="icon is-small is-left">
+                <i className="fas fa-lock"></i>
+              </span>
+            </p>
+          </div>
+          <div className="has-text-right">
+            <button className="button is-primary" onClick={handleSignup}>
+              Signup
+            </button>
+          </div>
         </div>
       </div>
     </div>
