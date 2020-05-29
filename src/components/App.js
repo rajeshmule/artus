@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 
 import Header from "./common/Header";
-import Home from "./home";
-import Login from "./login";
-import Signup from "./signup";
-import Article from "./article";
-import Profile from "./profile";
-import Editor from "./editor";
-import Settings from "./settings";
+import Home from "./Home";
+import Login from "./Login";
+import Signup from "./Signup";
+import Article from "./Article";
+import Profile from "./Profile";
+import Editor from "./Editor";
+import Settings from "./Settings";
 
 import { config } from "../constants";
 

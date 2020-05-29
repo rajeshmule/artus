@@ -22,6 +22,7 @@ const Signup = props => {
       })
     })
       .then(res => res.json())
+      .then(errors => console.log(errors))
       .then(user => props.history.push("/login"));
   }
   return (

@@ -21,7 +21,7 @@ class Article extends React.Component {
     const article = this.state.article;
 
     return (
-      <>
+      <div>
         {!article ? (
           <progress
             className="progress is-small is-primary"
@@ -35,7 +35,7 @@ class Article extends React.Component {
             </div>
           </div>
         )}
-      </>
+      </div>
     );
   }
 }
